@@ -1,8 +1,8 @@
 //
-//  SwiftUI_Combine_MVVMApp.swift
+//  EntryPointApp.swift
 //  SwiftUI-Combine-MVVM
 //
-//  Created by nxnam on 07/04/2022.
+//  Created by Mango on 07/04/2022.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUI_Combine_MVVMApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PokemonView(viewModel: PokemonViewModel())
         }
     }
 }
