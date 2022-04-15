@@ -39,6 +39,7 @@ class DefaultPokemonUseCase: PokemonUseCase {
             .mapError { $0 as Error }
             .map { $0.data }
             .decode(type: PokemonDetailModel.self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }
 }
